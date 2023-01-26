@@ -7,11 +7,23 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 string[] Array()
 {
-    string[] array = new string[new Random().Next(1, 10)];
-    for (int j = 0; j < array.Length; j++)
+    string[] array = new string[new Random().Next(1, 5)];
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write("Введите: ");
-        array[j] = Console.ReadLine();
+        array[i] = Console.ReadLine();
     }
     return array;
 }
+string[] array1 = Array();
+
+void PrintArray()
+{
+    for (int i = 0; i < array1.Length; i++)
+    {
+        if (array1[i].Length <= 3)
+            Console.Write($"\"{array1[i]}\" ");
+    }
+}
+
+PrintArray();
