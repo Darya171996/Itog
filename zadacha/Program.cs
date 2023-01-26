@@ -5,3 +5,13 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+string[] Array()
+{
+    string[] array = new string[new Random().Next(1, 10)];
+    for (int j = 0; j < array.Length; j++)
+    {
+        Console.Write("Введите: ");
+        array[j] = Console.ReadLine();
+    }
+    return array;
+}
